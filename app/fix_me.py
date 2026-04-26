@@ -1,31 +1,22 @@
-def max_number(a,b):
-
-   if a>b :
-
-   return a
-
+def max_number(a, b):
+    if a > b:
+        return a
     else:
-
-    return b
-
-
-def multiply (a,b):
-
-       return a    *    b
+        return b
 
 
-class  FixMe:
+def multiply(a, b):
+    return a * b
 
-   def __init__ (self,name):
 
-       self.name=name
+class FixMe:
+    def __init__(self, name):
+        self.name = name
 
-   def zero_function(x,y):
-
-         if x>0: print("positive")
-
-         elif x<0:
-
-          print("negative")
-
-         else: print("zero")
+    def zero_function(self, x, y):
+        if x > 0:
+            print("positive")
+        elif x < 0:
+            print("negative")
+        else:
+            print("zero")

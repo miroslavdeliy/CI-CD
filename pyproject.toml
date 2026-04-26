@@ -5,7 +5,7 @@ description = ""
 authors = [
     {name = "Miroslav Dely",email = "miroslavdely@gmail.com"}
 ]
-requires-python = "^3.14"
+requires-python = ">=3.14"
 dependencies = [
 ]
 
@@ -19,5 +19,26 @@ dev = [
     "ruff (>=0.15.11,<0.16.0)"
 ]
 
+[tool.ruff]
+line-length = 88
+target-version = "py311"
 
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle (pep8)
+    "F",   # pyflakes
+    "I",   # isort
+    "N",   # pep8-naming
+    "UP",  # pyupgrade (аналог pycodestyle improvements)
+    "B",   # flake8-bugbear (частично mccabe/логика)
+    "C90", # mccabe (цикломатическая сложность)
+    "SIM", # flake8-simplify
+    "PL",  # pylint (частично)
+]
+ignore = []
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "auto"
 
