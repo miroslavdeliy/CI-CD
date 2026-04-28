@@ -20,8 +20,8 @@ dev = [
 ]
 
 [tool.ruff]
-line-length = 88
-target-version = "py311"
+line-length = 80
+target-version = "py314"
 
 [tool.ruff.lint]
 select = [
@@ -40,5 +40,9 @@ ignore = []
 [tool.ruff.format]
 quote-style = "double"
 indent-style = "space"
-line-ending = "auto"
 
+[tool.ruff.lint.isort]
+force-sort-within-sections = true
+
+[tool.ruff.lint.per-file-ignores]
+"app/old_style.py" = ["F401"]
