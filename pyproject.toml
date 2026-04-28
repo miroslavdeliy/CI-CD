@@ -34,6 +34,7 @@ select = [
     "C90", # mccabe (цикломатическая сложность)
     "SIM", # flake8-simplify
     "PL",  # pylint (частично)
+    "ARG"
 ]
 ignore = []
 
