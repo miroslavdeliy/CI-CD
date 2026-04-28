@@ -13,7 +13,7 @@ class FixMe:
     def __init__(self, name):
         self.name = name
 
-    def zero_function(self, x, y):
+    def zero_function(self, x):
         if x > 0:
             print("positive")
         elif x < 0:

@@ -4,7 +4,7 @@ import os
 import sys
 
 
-def sum_numbers(a, b):
+def sum_numbers(a):
     second_number = int(
         input(
             "В это поле необходимо ввести второе число, с которым в последующем"
