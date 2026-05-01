@@ -16,7 +16,9 @@ build-backend = "poetry.core.masonry.api"
 
 [dependency-groups]
 dev = [
-    "ruff (>=0.15.11,<0.16.0)"
+    "ruff (>=0.15.11,<0.16.0)",
+    "mypy (>=1.20.2,<2.0.0)",
+    "bandit (>=1.9.4,<2.0.0)"
 ]
 
 [tool.ruff]
@@ -47,3 +49,16 @@ force-sort-within-sections = true
 
 [tool.ruff.lint.per-file-ignores]
 "app/old_style.py" = ["F401"]
+
+[tool.mypy]
+check_untyped_defs = true # Проверка функций без аннотации типов
+disallow_untyped_defs = true # Запрет использование функций без аннотации типов
+ignore_missing_imports = true # игнорировать отсутствие типизации в импортируемых библиотеках
+
+[tool.bandit]
+targets = ["app"] # какие папки сканировать
+exclude_dirs = ["tests", ".venv"] # папки, которые будут игнорироваться
+
+# Настройка срабатывания на medium и high
+severity = "medium"
+confidence = "medium"
